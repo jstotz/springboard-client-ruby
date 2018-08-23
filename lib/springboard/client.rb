@@ -30,7 +30,7 @@ module Springboard
     DEFAULT_CONNECT_TIMEOUT = 10
 
     ##
-    # @return [Addressable::URI] The client's base URI
+    # @return [URI] The client's base URI
     attr_reader :base_uri
 
     ##

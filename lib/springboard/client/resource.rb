@@ -21,7 +21,7 @@ module Springboard
       #
       # @return [Addressable::URI]
       attr_reader :uri
-      
+
       ##
       # The underlying Springboard Client.
       #
@@ -33,7 +33,7 @@ module Springboard
       # @param [Addressable::URI, #to_s] uri
       def initialize(client, uri)
         @client = client
-        @uri = URI.join('/', uri.to_s)
+        @uri = URI.join(client.base_uri, uri.to_s)
       end
 
       ##

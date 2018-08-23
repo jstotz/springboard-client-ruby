@@ -70,12 +70,6 @@ describe Springboard::Client::URI do
   end
 
   describe "merge_query_values!" do
-    it "should call springboard_query_values=" do
-      uri.query_values = {'a' => '1'}
-      expect(uri).to receive(:springboard_query_values=).with({'a' => '1', 'b' => '2'})
-      uri.merge_query_values! 'b' => '2'
-    end
-
     it "should merge the given values with the existing query_values" do
       uri.query_values = {'a' => '1', 'b' => '2'}
       uri.merge_query_values! 'b' => '20', 'c' => '30'
